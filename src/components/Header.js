@@ -6,18 +6,6 @@ import emitter from '../emitter';
 import type { HeaderState, SearchOption } from '../type';
 import '../style/Header.css';
 
-const options: Array<SearchOption> = [
-  'All',
-  'Audiobook',
-  'eBook',
-  'Movie',
-  'Music',
-  'Music Video',
-  'Podcast',
-  'TV Show',
-  'Software'
-];
-
 class Header extends React.PureComponent<{}, HeaderState> {
   emitSearch: () => void;
   _onKeyUp: (e: Object) => void;
@@ -74,27 +62,15 @@ class Header extends React.PureComponent<{}, HeaderState> {
     return (
       <div className="navbar-fixed">
         <nav>
-          <div className="nav-wrapper cyan">
+          <div className="nav-wrapper magenta">
             <div className="header-search-wrapper">
               <i className="material-icons black-text">search</i>
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Search App Store"
                 onKeyUp={this._onKeyUp}
                 className="search-input white black-text"
               />
-            </div>
-            <div className="dropdown-wrapper">
-              <div
-                className="dropdown-button"
-                role="button"
-                data-activates="search-options"
-              >
-                {this.state.media}
-              </div>
-              <ul id="search-options" className="dropdown-content">
-                {this.renderSearchOption()}
-              </ul>
             </div>
           </div>
         </nav>

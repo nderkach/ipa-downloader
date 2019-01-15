@@ -17,6 +17,10 @@ const msgMap: Object = {
   error: {
     icon: 'error',
     msg: 'Error!'
+  },
+  download: {
+    icon: 'swap_vert',
+    msg: 'Preparing your download...'
   }
 };
 

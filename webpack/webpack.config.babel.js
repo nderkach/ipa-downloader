@@ -12,11 +12,17 @@ webpackConfig.module.rules.push({
   use: ['babel-loader']
 });
 
+webpackConfig.module.rules.push({
+  test: /\.css$/,    
+  loaders: ['style-loader', 'css-loader'],
+  include: /node_modules/
+});
+
 module.exports = Object.assign({}, webpackConfig, {
   devtool: 'source-map',
   entry: './src',
   output: {
-    path: path.resolve(__dirname, '../', 'dist/'),
+    path: path.resolve(__dirname, '../', '.'),
     filename: 'bundle.js'
   },
   plugins: [

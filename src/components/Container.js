@@ -26,12 +26,22 @@ class Container extends React.PureComponent<{}, ContainerState> {
     }
   }
 
+  async showDownloadProgress(headerState: HeaderState) {
+    try {
+      this.setState({ status: 'download' });
+    } catch (e) {
+      this.setState({ status: 'error' });
+    }
+  }
+
   componentDidMount() {
     emitter.on('search', this.getSearchResult.bind(this));
+    emitter.on('download', this.showDownloadProgress.bind(this));
   }
 
   componentWillUnmount() {
     emitter.removeListener('search');
+    emitter.removeListener('download');
   }
 
   render() {

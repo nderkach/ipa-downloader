@@ -23,5 +23,6 @@ export type SearchResult = {
   collectionName?: string,
   kind: string,
   longDescription?: string,
-  description?: string
+  description?: string,
+  version: string
 };

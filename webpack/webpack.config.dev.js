@@ -11,6 +11,12 @@ webpackConfig.module.rules.push({
   ]
 });
 
+webpackConfig.module.rules.push({
+  test: /\.css$/,    
+  loaders: ['style-loader', 'css-loader'],
+  include: /node_modules/
+});
+
 module.exports = Object.assign({}, webpackConfig, {
   devtool: 'cheap-module-eval-source-map',
   entry: [

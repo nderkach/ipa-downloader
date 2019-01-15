@@ -10,6 +10,7 @@
     "babel",
     "ES6"
   ],
+  "homepage": "https://nderkach.github.io/ipa-download",
   "repository": {
     "type": "git",
     "url": "git@github.com:LeoAJ/react-facebook-friends.git"
@@ -24,20 +25,24 @@
     "jest": "jest test/unit",
     "flow": "flow",
     "clean": "rimraf dist/",
-    "build": "webpack --config ./webpack/webpack.config.babel.js --progress --colors --define process.env.NODE_ENV='\"production\"'",
+    "build": "webpack --config ./webpack/webpack.config.babel.js --progress --colors --define process.env.NODE_ENV='\"production\"' && cp index.html dist/",
     "dev": "webpack-dev-server --config ./webpack/webpack.config.dev.js",
-    "deploy": "yarn clean && yarn build",
     "lint": "eslint src/** webpack/** test/**",
-    "start": "yarn dev"
+    "start": "yarn dev",
+    "predeploy": "yarn clean && yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "autoprefixer": "^7.1.6",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.3",
+    "downloadjs": "^1.4.7",
     "fecha": "^2.2.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-hot-loader": "^3.0.0-beta.6"
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-spinkit": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",

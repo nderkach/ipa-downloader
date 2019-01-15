@@ -1,6 +1,6 @@
 .card-wrapper {
   display: inline-block;
-	width: 300px;
+	width: 250px;
 }
 
 .kind {
@@ -8,4 +8,14 @@
   font-weight: 300;
   font-size: 0.8em;
   border-radius: 2px;
+}
+
+.download-button {
+
+}
+
+.hidden { display:none; }
+
+.download-link {
+    cursor:pointer;
 }
