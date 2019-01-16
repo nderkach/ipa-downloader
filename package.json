@@ -1,21 +1,23 @@
 {
-  "name": "react-iTunes-search",
+  "name": "ipa-download",
   "version": "2.2.2",
-  "description": "simple web app for iTunes Search implemented by React",
+  "description": "App Store search and downloader",
   "keywords": [
     "react",
     "iTunes",
+    "App Store",
     "search",
     "apple",
     "babel",
-    "ES6"
+    "ES6",
+    "IPA"
   ],
   "homepage": "https://nderkach.github.io/ipa-download",
   "repository": {
     "type": "git",
-    "url": "git@github.com:LeoAJ/react-facebook-friends.git"
+    "url": "git@github.com:nderkach/ipa-downloader.git"
   },
-  "author": "Leo Hsieh <leo0924@gmail.com> (http://leoj.js.org)",
+  "author": "Nikolay Derkach <nikolay@derka.ch>",
   "license": "MIT",
   "scripts": {
     "coverage": "jest --coverage",
